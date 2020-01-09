@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GitHub API App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Create a form 
+    - The user must be able to search for a GitHub user handle.
+    - Search button to trigger API
+    - empty results
+    - remove class - hidden
+    - Use js to to call API and display repo name and link to repo url
+    - make sure to empty results when a new search is created
+    - css - create hidden class.
+    -->
+    <div class="container">
+        <h2>GitHub Repo Search</h2>
+
+        <form id="js-form">
+            <label for="search-term">User Search</label>
+            <input type="text" name="search-term" id="js-search-term"></input>
+            <input type="submit" value="Search!">
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+
+        <section id="results" class="hidden">
+            <h3>GitHub Repo Results</h3>
+            <ul id="results-list"></ul>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
