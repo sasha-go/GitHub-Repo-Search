@@ -19,7 +19,8 @@ function getGithubRepos(username){
         })
         .then(responseJson => displayResults(responseJson))
         .catch(error => {
-            $('js-error-message').text(`Boo! Something went wrong: ${error.message}`)
+            $('#js-error-message').text(`Boo! Something went wrong: ${error.message}`)
+            console.log(error);
         });
      }
 
@@ -49,4 +50,3 @@ function startFunctions() {
 }
 
 startFunctions();
-
